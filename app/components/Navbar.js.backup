@@ -1,0 +1,73 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import styles from "./Navbar.module.css";
+
+const enlaces = [
+  { nombre: "Inicio", href: "/" },
+  { nombre: "Historia", href: "/historia" },
+  { nombre: "Turismo", href: "/turismo" },
+  { nombre: "Carnavales", href: "/carnavales" },
+  { nombre: "Gastronomía", href: "/gastronomia" },
+  { nombre: "Galería", href: "/galeria" },
+  { nombre: "Contáctanos", href: "/contactanos" },
+];
+
+export default function Navbar() {
+  const pathname = usePathname();
+  const [menuAbierto, setMenuAbierto] = useState(false);
+
+  return (
+    <header className={styles.header}>
+      <nav className={styles.navbar} aria-label="Navegación principal">
+        <Link
+          href="/"
+          className={styles.logo}
+          onClick={() => setMenuAbierto(false)}
+        >
+          <Image
+            src="/logo.png"
+            alt="Logo Turismo Celendín"
+            width={72}
+            height={72}
+            priority
+          />
+        </Link>
+
+        <button
+          type="button"
+          className={styles.menuButton}
+          onClick={() => setMenuAbierto((estado) => !estado)}
+          aria-label="Abrir menú"
+          aria-expanded={menuAbierto}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <div
+          className={`${styles.links} ${
+            menuAbierto ? styles.menuAbierto : ""
+          }`}
+        >
+          {enlaces.map((enlace) => (
+            <Link
+              key={enlace.href}
+              href={enlace.href}
+              onClick={() => setMenuAbierto(false)}
+              className={`${styles.link} ${
+                pathname === enlace.href ? styles.activo : ""
+              }`}
+            >
+              {enlace.nombre}
+            </Link>
+          ))}
+        </div>
+      </nav>
+    </header>
+  );
+}

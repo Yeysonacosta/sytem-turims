@@ -9,25 +9,25 @@ export default function Historia() {
         <div className={styles.overlay}></div>
 
         <Image
-          src="/historia-banner.jpg"
-          alt="Historia de Celendín"
+          src="/fondocelendin.png"
+          alt="Historia de CelendÃ­n"
           fill
           priority
           className={styles.heroImage}
         />
 
         <div className={styles.heroContent}>
-          <h1>Historia de Celendín</h1>
+          <h1>Historia de CelendÃ­n</h1>
 
           <p>
-            Descubre los orígenes de una de las provincias más importantes de
-            Cajamarca, reconocida por su riqueza histórica, cultural y el
-            espíritu trabajador de su gente.
+            Descubre los orÃ­genes de una de las provincias mÃ¡s importantes de
+            Cajamarca, reconocida por su riqueza histÃ³rica, cultural y el
+            espÃ­ritu trabajador de su gente.
           </p>
         </div>
       </section>
 
-      {/* ================= INTRODUCCIÓN ================= */}
+      {/* ================= INTRODUCCIÃ“N ================= */}
 
       <section className={styles.container}>
 
@@ -35,22 +35,22 @@ export default function Historia() {
 
           <div>
 
-            <h2>Los orígenes de Celendín</h2>
+            <h2>Los orÃ­genes de CelendÃ­n</h2>
 
             <p>
-              Celendín es una provincia ubicada en el departamento de
-              Cajamarca, en la sierra norte del Perú. A lo largo de los años se
-              ha convertido en un importante centro comercial, agrícola,
-              artesanal y turístico gracias a su privilegiada ubicación y a la
+              CelendÃ­n es una provincia ubicada en el departamento de
+              Cajamarca, en la sierra norte del PerÃº. A lo largo de los aÃ±os se
+              ha convertido en un importante centro comercial, agrÃ­cola,
+              artesanal y turÃ­stico gracias a su privilegiada ubicaciÃ³n y a la
               riqueza cultural heredada de sus antiguos pobladores.
             </p>
 
             <p>
-              Su nombre está ligado a diversas teorías históricas. Algunos
+              Su nombre estÃ¡ ligado a diversas teorÃ­as histÃ³ricas. Algunos
               investigadores sostienen que proviene de antiguos pobladores
-              llegados desde España, mientras que otros indican que tiene
-              relación con pueblos indígenas que ocuparon la región mucho antes
-              de la llegada de los españoles.
+              llegados desde EspaÃ±a, mientras que otros indican que tiene
+              relaciÃ³n con pueblos indÃ­genas que ocuparon la regiÃ³n mucho antes
+              de la llegada de los espaÃ±oles.
             </p>
 
           </div>
@@ -58,8 +58,8 @@ export default function Historia() {
           <div className={styles.imageBox}>
 
             <Image
-              src="/historia1.jpg"
-              alt="Celendín antiguo"
+              src="/images/historia/origenes-celendin.png"
+              alt="CelendÃ­n antiguo"
               width={600}
               height={450}
             />
@@ -70,7 +70,7 @@ export default function Historia() {
 
       </section>
 
-      {/* ================= FUNDACIÓN ================= */}
+      {/* ================= FUNDACIÃ“N ================= */}
 
       <section className={styles.sectionGray}>
 
@@ -81,8 +81,8 @@ export default function Historia() {
             <div className={styles.imageBox}>
 
               <Image
-                src="/historia2.jpg"
-                alt="Fundación de Celendín"
+                src="/images/historia/fundacion-celendin.png"
+                alt="FundaciÃ³n de CelendÃ­n"
                 width={600}
                 height={450}
               />
@@ -91,20 +91,20 @@ export default function Historia() {
 
             <div>
 
-              <h2>Fundación de la ciudad</h2>
+              <h2>FundaciÃ³n de la ciudad</h2>
 
               <p>
-                La ciudad de Celendín fue fundada oficialmente durante la época
-                colonial. Desde entonces se convirtió en un importante punto de
+                La ciudad de CelendÃ­n fue fundada oficialmente durante la Ã©poca
+                colonial. Desde entonces se convirtiÃ³ en un importante punto de
                 intercambio comercial entre la costa y la sierra, favoreciendo
-                el crecimiento económico de toda la región.
+                el crecimiento econÃ³mico de toda la regiÃ³n.
               </p>
 
               <p>
-                Durante el Virreinato del Perú, Celendín destacó por el trabajo
-                agrícola, la producción ganadera y el desarrollo de la
-                artesanía, actividades que continúan siendo parte fundamental
-                de su economía.
+                Durante el Virreinato del PerÃº, CelendÃ­n destacÃ³ por el trabajo
+                agrÃ­cola, la producciÃ³n ganadera y el desarrollo de la
+                artesanÃ­a, actividades que continÃºan siendo parte fundamental
+                de su economÃ­a.
               </p>
 
             </div>
@@ -115,14 +115,14 @@ export default function Historia() {
 
       </section>
 
-      {/* ================= LÍNEA DE TIEMPO ================= */}
+      {/* ================= LÃNEA DE TIEMPO ================= */}
 
       <section className={styles.timelineSection}>
 
         <div className={styles.container}>
 
           <h2 className={styles.center}>
-            Línea del Tiempo
+            LÃ­nea del Tiempo
           </h2>
 
           <div className={styles.timeline}>
@@ -142,13 +142,13 @@ export default function Historia() {
 
             <div className={styles.card}>
 
-              <span>Época Colonial</span>
+              <span>Ã‰poca Colonial</span>
 
-              <h3>Fundación</h3>
+              <h3>FundaciÃ³n</h3>
 
               <p>
-                Celendín comienza su crecimiento como villa colonial gracias a
-                su ubicación estratégica y actividad económica.
+                CelendÃ­n comienza su crecimiento como villa colonial gracias a
+                su ubicaciÃ³n estratÃ©gica y actividad econÃ³mica.
               </p>
 
             </div>
@@ -160,9 +160,9 @@ export default function Historia() {
               <h3>Desarrollo</h3>
 
               <p>
-                La ciudad fortalece sus actividades comerciales, agrícolas y
-                ganaderas convirtiéndose en una de las más importantes de la
-                región.
+                La ciudad fortalece sus actividades comerciales, agrÃ­colas y
+                ganaderas convirtiÃ©ndose en una de las mÃ¡s importantes de la
+                regiÃ³n.
               </p>
 
             </div>
@@ -171,11 +171,11 @@ export default function Historia() {
 
               <span>Actualidad</span>
 
-              <h3>Destino Turístico</h3>
+              <h3>Destino TurÃ­stico</h3>
 
               <p>
-                Hoy Celendín es reconocido por su patrimonio histórico,
-                gastronomía, naturaleza, cultura y hospitalidad.
+                Hoy CelendÃ­n es reconocido por su patrimonio histÃ³rico,
+                gastronomÃ­a, naturaleza, cultura y hospitalidad.
               </p>
 
             </div>
@@ -208,9 +208,9 @@ export default function Historia() {
             <h3>Sombreros de Paja</h3>
 
             <p>
-              Celendín es reconocido a nivel nacional por la elaboración
-              artesanal de sombreros de paja, una tradición transmitida de
-              generación en generación.
+              CelendÃ­n es reconocido a nivel nacional por la elaboraciÃ³n
+              artesanal de sombreros de paja, una tradiciÃ³n transmitida de
+              generaciÃ³n en generaciÃ³n.
             </p>
 
           </div>
@@ -263,14 +263,14 @@ export default function Historia() {
         <div className={styles.container}>
 
           <h2>
-            Celendín: Historia, Cultura y Tradición
+            CelendÃ­n: Historia, Cultura y TradiciÃ³n
           </h2>
 
           <p>
-            Conocer la historia de Celendín es comprender el esfuerzo, la
+            Conocer la historia de CelendÃ­n es comprender el esfuerzo, la
             identidad y las costumbres de un pueblo que ha sabido conservar sus
-            raíces mientras continúa desarrollándose como uno de los principales
-            destinos turísticos de la región Cajamarca.
+            raÃ­ces mientras continÃºa desarrollÃ¡ndose como uno de los principales
+            destinos turÃ­sticos de la regiÃ³n Cajamarca.
           </p>
 
         </div>

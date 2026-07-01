@@ -9,8 +9,14 @@ html {
 }
 
 body {
-
     font-family: Arial, Helvetica, sans-serif;
     background: rgb(255, 253, 253);
+}
 
+html {
+  scroll-behavior: smooth;
+}
+::selection {
+  background: #37d20d;
+  color: #ffffff;
 }

@@ -1,0 +1,795 @@
+﻿/* ==================================================
+   HERO
+================================================== */
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.heroImage{
+    object-fit: cover;
+    z-index: 1;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    );
+    z-index: 2;
+}
+
+.heroContent{
+    position: absolute;
+    top: 55%;
+    left: 8%;
+    transform: translateY(-50%);
+    max-width: 650px;
+    color: white;
+    z-index: 3;
+    animation: fadeUp 1.2s ease;
+}
+
+.heroContent h1{
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(0,0,0,.4);
+}
+
+.heroContent p{
+    font-size: 22px;
+    line-height: 38px;
+    color: #f4f4f4;
+}
+
+/* ==================================================
+   CONTENEDOR GENERAL
+================================================== */
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.title{
+    text-align: center;
+    font-size: 45px;
+    color: #0c6248;
+    margin-bottom: 60px;
+}
+
+/* ==================================================
+   INTRODUCCIÓN
+================================================== */
+
+.intro{
+    padding: 110px 0;
+    background: white;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 70px;
+    align-items: center;
+}
+
+.grid h2{
+    font-size: 45px;
+    color: #0c6248;
+    margin-bottom: 25px;
+}
+
+.grid p{
+    font-size: 18px;
+    color: #555;
+    text-align: justify;
+    line-height: 34px;
+    margin-bottom: 18px;
+}
+
+/* ==================================================
+   IMÁGENES
+================================================== */
+
+.imageBox{
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+.imageBox img{
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: .6s;
+}
+
+.imageBox:hover img{
+    transform: scale(1.08);
+}
+
+/* ==================================================
+   LUGARES TURÍSTICOS
+================================================== */
+
+.lugares{
+    padding: 100px 0;
+    background: #f8faf9;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 35px;
+}
+
+.card{
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,.08);
+    transition: .4s;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.18);
+}
+
+.card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.card:hover img{
+    transform: scale(1.08);
+}
+
+.info{
+    padding: 25px;
+}
+
+.info h3{
+    color: #0c6248;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.info p{
+    color: #666;
+    line-height: 30px;
+    text-align: justify;
+}
+
+/* ==================================================
+   EXPERIENCIA
+================================================== */
+
+.experience{
+    padding: 110px 0;
+    background: white;
+}
+
+.gridReverse{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 70px;
+    align-items: center;
+}
+
+.gridReverse h2{
+    font-size: 42px;
+    color: #0c6248;
+    margin-bottom: 25px;
+}
+
+.gridReverse p{
+    color: #555;
+    line-height: 34px;
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 18px;
+}
+
+/* ==================================================
+   ANIMACIÓN
+================================================== */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform: translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+
+}
+/*==================================================
+  ACTIVIDADES
+==================================================*/
+
+.actividades{
+    padding: 100px 0;
+    background: #f5f8f7;
+}
+
+.activityGrid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.activityCard{
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+
+    transition: .4s;
+
+    border-top: 5px solid #38b000;
+
+}
+
+.activityCard:hover{
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.activityCard h3{
+
+    color: #0c6248;
+
+    margin-bottom: 20px;
+
+    font-size: 24px;
+
+}
+
+.activityCard p{
+
+    color: #666;
+
+    line-height: 30px;
+
+    text-align: justify;
+
+    font-size: 17px;
+
+}
+
+/*==================================================
+  GALERÍA
+==================================================*/
+
+.gallery{
+
+    padding: 110px 0;
+
+    background: white;
+
+}
+
+.galleryGrid{
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 25px;
+
+    margin-top: 60px;
+
+}
+
+.galleryGrid img{
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    cursor: pointer;
+
+    transition: .5s;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+
+}
+
+.galleryGrid img:hover{
+
+    transform: scale(1.05);
+
+    box-shadow: 0 25px 45px rgba(0,0,0,.25);
+
+}
+
+/*==================================================
+  POR QUÉ VISITAR
+==================================================*/
+
+.why{
+
+    padding: 110px 0;
+
+    background: linear-gradient(
+        to bottom,
+        #f8faf9,
+        #eef7f2
+    );
+
+}
+
+.whyGrid{
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 35px;
+
+    margin-top: 60px;
+
+}
+
+.whyGrid div{
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    transition: .4s;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.whyGrid div:hover{
+
+    transform: translateY(-8px);
+
+}
+
+.whyGrid h3{
+
+    color: #0c6248;
+
+    margin-bottom: 18px;
+
+    font-size: 26px;
+
+}
+
+.whyGrid p{
+
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 30px;
+
+    text-align: justify;
+
+}
+
+/*==================================================
+  BOTONES
+==================================================*/
+
+.button{
+
+    padding: 18px 45px;
+
+    background: #37d20d;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 50px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .4s;
+
+}
+
+.button:hover{
+
+    background: #1d8c00;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 30px rgba(0,0,0,.2);
+
+}
+
+/*==================================================
+  EFECTOS
+==================================================*/
+
+.card img,
+.galleryGrid img,
+.imageBox img{
+
+    transition: transform .5s ease;
+
+}
+
+.card:hover img{
+
+    transform: scale(1.08);
+
+}
+
+.imageBox:hover img{
+
+    transform: scale(1.08);
+
+}
+
+.galleryGrid img:hover{
+
+    transform: scale(1.08);
+
+}
+/*==================================================
+    CTA FINAL
+==================================================*/
+
+.cta{
+    width:100%;
+    padding:120px 0;
+    text-align:center;
+
+    background: linear-gradient(
+        135deg,
+        rgba(12,98,72,.95),
+        rgba(55,210,13,.90)
+    ),
+    url("/turismo-banner.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    color:white;
+}
+
+.cta h2{
+
+    font-size:55px;
+
+    margin-bottom:25px;
+
+    font-weight:700;
+
+}
+
+.cta p{
+
+    width:70%;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:35px;
+
+    margin-bottom:40px;
+
+}
+
+.button{
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:#0c6248;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+.button:hover{
+
+    background:#37d20d;
+
+    color:white;
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+/*==================================================
+    SCROLL SUAVE
+==================================================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/*==================================================
+    RESPONSIVE TABLET
+==================================================*/
+
+@media(max-width:992px){
+
+.heroContent{
+
+left:5%;
+
+max-width:500px;
+
+}
+
+.heroContent h1{
+
+font-size:50px;
+
+}
+
+.heroContent p{
+
+font-size:18px;
+
+line-height:30px;
+
+}
+
+.grid,
+.gridReverse{
+
+grid-template-columns:1fr;
+
+gap:40px;
+
+}
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.activityGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.galleryGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.whyGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.cta h2{
+
+font-size:42px;
+
+}
+
+.cta p{
+
+width:90%;
+
+}
+
+}
+
+/*==================================================
+    RESPONSIVE CELULAR
+==================================================*/
+
+@media(max-width:768px){
+
+.hero{
+
+height:85vh;
+
+}
+
+.heroContent{
+
+left:25px;
+
+right:25px;
+
+max-width:100%;
+
+}
+
+.heroContent h1{
+
+font-size:38px;
+
+}
+
+.heroContent p{
+
+font-size:17px;
+
+line-height:28px;
+
+}
+
+.title{
+
+font-size:34px;
+
+}
+
+.grid h2,
+.gridReverse h2{
+
+font-size:34px;
+
+}
+
+.grid p,
+.gridReverse p{
+
+font-size:16px;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.activityGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.galleryGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.galleryGrid img{
+
+height:240px;
+
+}
+
+.whyGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.cta{
+
+padding:90px 20px;
+
+}
+
+.cta h2{
+
+font-size:34px;
+
+}
+
+.cta p{
+
+width:100%;
+
+font-size:17px;
+
+}
+
+.button{
+
+width:100%;
+
+max-width:280px;
+
+}
+
+}
+
+/*==================================================
+    ANIMACIONES
+==================================================*/
+
+.card,
+.activityCard,
+.infoCard,
+.whyGrid div{
+
+animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*==================================================
+    SELECCIÓN DE TEXTO
+==================================================*/
+
+::selection{
+
+background:#37d20d;
+
+color:white;
+
+}

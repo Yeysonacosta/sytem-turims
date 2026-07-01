@@ -1,952 +1,339 @@
-/*==================================================
-                HERO
-==================================================*/
-
-.hero{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+.pagina {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #f8faf7;
 }
 
-.heroImage{
-    object-fit: cover;
-    z-index: 1;
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #173c2e;
 }
 
-.overlay{
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        rgba(0,0,0,.55),
-        rgba(0,0,0,.55)
-    );
-    z-index: 2;
+.heroImagen {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.heroContent{
-
-    position: absolute;
-
-    top: 55%;
-
-    left: 8%;
-
-    transform: translateY(-50%);
-
-    max-width: 650px;
-
-    color: white;
-
-    z-index: 3;
-
-    animation: fadeUp 1s ease;
-
-}
-
-.heroContent h1{
-
-    font-size: 70px;
-
-    font-weight: 700;
-
-    margin-bottom: 20px;
-
-    text-shadow: 3px 3px 12px rgba(0,0,0,.35);
-
-}
-
-.heroContent p{
-
-    font-size: 22px;
-
-    line-height: 38px;
-
-}
-
-/*==================================================
-            CONTENEDOR
-==================================================*/
-
-.container{
-
-    width: 90%;
-
-    max-width: 1200px;
-
-    margin: auto;
-
-}
-
-.title{
-
-    text-align: center;
-
-    font-size: 45px;
-
-    color: #0b5e44;
-
-    margin-bottom: 60px;
-
-}
-
-/*==================================================
-            INTRODUCCIÓN
-==================================================*/
-
-.intro{
-
-    padding: 110px 0;
-
-    background: white;
-
-}
-
-.grid{
-
-    display: grid;
-
-    grid-template-columns: repeat(2,1fr);
-
-    gap: 70px;
-
-    align-items: center;
-
-}
-
-.grid h2{
-
-    font-size: 42px;
-
-    color: #0b5e44;
-
-    margin-bottom: 25px;
-
-}
-
-.grid p{
-
-    font-size: 18px;
-
-    line-height: 34px;
-
-    color: #555;
-
-    text-align: justify;
-
-    margin-bottom: 20px;
-
-}
-
-/*==================================================
-            IMÁGENES
-==================================================*/
-
-.imageBox{
-
-    overflow: hidden;
-
-    border-radius: 20px;
-
-    box-shadow: 0 20px 40px rgba(0,0,0,.12);
-
-}
-
-.imageBox img{
-
-    width: 100%;
-
-    height: auto;
-
-    display: block;
-
-    transition: .6s;
-
-}
-
-.imageBox:hover img{
-
-    transform: scale(1.08);
-
-}
-
-/*==================================================
-            PLATOS TÍPICOS
-==================================================*/
-
-.platos{
-
-    padding: 110px 0;
-
-    background: #f8faf9;
-
-}
-
-.cards{
-
-    display: grid;
-
-    grid-template-columns: repeat(3,1fr);
-
-    gap: 35px;
-
-}
-
-.card{
-
-    background: white;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-
-    transition: .4s;
-
-}
-
-.card:hover{
-
-    transform: translateY(-10px);
-
-    box-shadow: 0 20px 45px rgba(0,0,0,.18);
-
-}
-
-.card img{
-
-    width: 100%;
-
-    height: 250px;
-
-    object-fit: cover;
-
-    transition: .5s;
-
-}
-
-.card:hover img{
-
-    transform: scale(1.08);
-
-}
-
-.info{
-
-    padding: 25px;
-
-}
-
-.info h3{
-
-    color: #0b5e44;
-
-    font-size: 24px;
-
-    margin-bottom: 15px;
-
-}
-
-.info p{
-
-    color: #666;
-
-    line-height: 30px;
-
-    text-align: justify;
-
-}
-
-/*==================================================
-            BEBIDAS
-==================================================*/
-
-.bebidas{
-
-    padding: 110px 0;
-
-    background: white;
-
-}
-
-.gridReverse{
-
-    display: grid;
-
-    grid-template-columns: repeat(2,1fr);
-
-    gap: 70px;
-
-    align-items: center;
-
-}
-
-.gridReverse h2{
-
-    font-size: 42px;
-
-    color: #0b5e44;
-
-    margin-bottom: 25px;
-
-}
-
-.gridReverse p{
-
-    font-size: 18px;
-
-    line-height: 34px;
-
-    color: #555;
-
-    text-align: justify;
-
-    margin-bottom: 18px;
-
-}
-
-/*==================================================
-            ANIMACIÓN
-==================================================*/
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity: 0;
-
-        transform: translateY(40px);
-
-    }
-
-    to{
-
-        opacity: 1;
-
-        transform: translateY(0);
-
-    }
-
-}
-/*==================================================
-            PRODUCTOS LOCALES
-==================================================*/
-
-.productos{
-
-    padding: 110px 0;
-
-    background: #f7faf8;
-
-}
-
-/*==================================================
-            POSTRES
-==================================================*/
-
-.postres{
-
-    padding: 110px 0;
-
-    background: white;
-
-}
-
-/*==================================================
-            GALERÍA
-==================================================*/
-
-.gallery{
-
-    padding: 110px 0;
-
-    background: #f7faf8;
-
-}
-
-.galleryGrid{
-
-    display: grid;
-
-    grid-template-columns: repeat(3,1fr);
-
-    gap: 25px;
-
-    margin-top: 50px;
-
-}
-
-.galleryGrid img{
-
-    width:100%;
-
-    height:260px;
-
-    object-fit:cover;
-
-    border-radius:18px;
-
-    cursor:pointer;
-
-    transition:.5s;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.12);
-
-}
-
-.galleryGrid img:hover{
-
-    transform:scale(1.08);
-
-    box-shadow:0 20px 40px rgba(0,0,0,.20);
-
-}
-
-/*==================================================
-            EFECTOS GENERALES
-==================================================*/
-
-.card img,
-.imageBox img,
-.galleryGrid img{
-
-    transition:all .5s ease;
-
-}
-
-.imageBox:hover img{
-
-    transform:scale(1.08);
-
-}
-
-.card:hover img{
-
-    transform:scale(1.08);
-
-}
-
-.card:hover{
-
-    transform:translateY(-10px);
-
-}
-
-.galleryGrid img:hover{
-
-    transform:scale(1.08);
-
-}
-
-/*==================================================
-            BOTÓN
-==================================================*/
-
-.button{
-
-    padding:18px 45px;
-
-    border:none;
-
-    border-radius:50px;
-
-    background:#37d20d;
-
-    color:white;
-
-    font-size:18px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:.4s;
-
-}
-
-.button:hover{
-
-    background:#0b5e44;
-
-    transform:translateY(-5px);
-
-    box-shadow:0 15px 35px rgba(0,0,0,.20);
-
-}
-
-/*==================================================
-            SOMBRAS
-==================================================*/
-
-.card{
-
-    box-shadow:0 12px 25px rgba(0,0,0,.08);
-
-}
-
-.imageBox{
-
-    box-shadow:0 18px 35px rgba(0,0,0,.15);
-
-}
-
-.galleryGrid img{
-
-    box-shadow:0 12px 25px rgba(0,0,0,.10);
-
-}
-
-/*==================================================
-            EFECTO HOVER TARJETAS
-==================================================*/
-
-.card{
-
-    overflow:hidden;
-
-}
-
-.card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:-100%;
-
-    width:100%;
-
-    height:100%;
-
-    background:linear-gradient(
-
-        120deg,
-
-        transparent,
-
-        rgba(255,255,255,.25),
-
-        transparent
-
-    );
-
-    transition:.8s;
-
-}
-
-.card{
-
-    position:relative;
-
-}
-
-.card:hover::before{
-
-    left:100%;
-
-}
-
-/*==================================================
-            TÍTULOS
-==================================================*/
-
-.title{
-
-    position:relative;
-
-}
-
-.title::after{
-
-    content:"";
-
-    display:block;
-
-    width:90px;
-
-    height:5px;
-
-    margin:18px auto 0;
-
-    border-radius:20px;
-
-    background:#37d20d;
-
-}
-
-/*==================================================
-            INFO
-==================================================*/
-
-.info h3{
-
-    transition:.3s;
-
-}
-
-.card:hover .info h3{
-
-    color:#37d20d;
-
-}
-/*==================================================
-            ¿POR QUÉ PROBAR?
-==================================================*/
-
-.why{
-
-    padding:110px 0;
-
-    background:linear-gradient(
-        to bottom,
-        #ffffff,
-        #f2faf5
-    );
-
-}
-
-.whyGrid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:35px;
-
-    margin-top:60px;
-
-}
-
-.whyGrid div{
-
-    background:white;
-
-    padding:35px;
-
-    border-radius:20px;
-
-    transition:.4s;
-
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-
-}
-
-.whyGrid div:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
-
-}
-
-.whyGrid h3{
-
-    color:#0b5e44;
-
-    font-size:26px;
-
-    margin-bottom:18px;
-
-}
-
-.whyGrid p{
-
-    color:#666;
-
-    font-size:17px;
-
-    line-height:30px;
-
-    text-align:justify;
-
-}
-
-/*==================================================
-            CTA FINAL
-==================================================*/
-
-.cta{
-
-    padding:120px 0;
-
-    text-align:center;
-
-    color:white;
-
-    background:linear-gradient(
-        rgba(11,94,68,.85),
-        rgba(55,210,13,.80)
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 25, 18, 0.94) 0%,
+      rgba(4, 25, 18, 0.72) 42%,
+      rgba(4, 25, 18, 0.2) 100%
     ),
-    url("/gastronomia-banner.jpg");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-attachment:fixed;
-
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.45),
+      transparent 55%
+    );
 }
 
-.cta h2{
-
-    font-size:52px;
-
-    margin-bottom:20px;
-
+.heroContenido {
+  position: relative;
+  z-index: 2;
+  width: min(760px, 90%);
+  padding: 155px 0 90px;
+  margin-left: 8%;
+  color: #ffffff;
 }
 
-.cta p{
-
-    width:70%;
-
-    margin:auto;
-
-    font-size:20px;
-
-    line-height:35px;
-
-    margin-bottom:40px;
-
+.etiqueta,
+.presentacion > span,
+.encabezado > span,
+.invitacion span {
+  display: inline-block;
+  color: #5ae62e;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-/*==================================================
-            RESPONSIVE TABLET
-==================================================*/
-
-@media(max-width:992px){
-
-.hero{
-
-height:85vh;
-
+.heroContenido h1 {
+  max-width: 760px;
+  margin: 18px 0 25px;
+  font-size: clamp(50px, 7vw, 92px);
+  line-height: 0.98;
+  letter-spacing: -3px;
 }
 
-.heroContent{
-
-left:5%;
-
-max-width:500px;
-
+.heroContenido h1 strong {
+  display: block;
+  color: #5ae62e;
 }
 
-.heroContent h1{
-
-font-size:52px;
-
+.heroContenido p {
+  max-width: 690px;
+  margin-bottom: 35px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(18px, 2vw, 23px);
+  line-height: 1.75;
 }
 
-.heroContent p{
-
-font-size:18px;
-
-line-height:30px;
-
+.boton,
+.botonOscuro {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 31px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.grid,
-.gridReverse{
-
-grid-template-columns:1fr;
-
-gap:40px;
-
+.boton {
+  color: #103529;
+  background: #5ae62e;
+  box-shadow: 0 15px 35px rgba(90, 230, 46, 0.27);
 }
 
-.cards{
-
-grid-template-columns:repeat(2,1fr);
-
+.boton:hover,
+.botonOscuro:hover {
+  transform: translateY(-4px);
 }
 
-.galleryGrid{
-
-grid-template-columns:repeat(2,1fr);
-
+.presentacion {
+  max-width: 1200px;
+  margin: auto;
+  padding: 110px 25px;
+  text-align: center;
 }
 
-.whyGrid{
-
-grid-template-columns:1fr;
-
+.presentacion h2,
+.encabezado h2,
+.invitacion h2 {
+  margin: 13px 0 20px;
+  color: #123f34;
+  font-size: clamp(36px, 5vw, 59px);
+  line-height: 1.08;
 }
 
-.cta h2{
-
-font-size:40px;
-
+.presentacion > p,
+.encabezado > p {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #68736e;
+  font-size: 18px;
+  line-height: 1.85;
 }
 
-.cta p{
-
-width:90%;
-
+.caracteristicas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 55px;
 }
 
+.caracteristica {
+  padding: 34px 27px;
+  border: 1px solid #e0e9e3;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(20, 63, 51, 0.08);
 }
 
-/*==================================================
-            RESPONSIVE CELULAR
-==================================================*/
-
-@media(max-width:768px){
-
-.hero{
-
-height:80vh;
-
+.icono {
+  margin-bottom: 15px;
+  font-size: 42px;
 }
 
-.heroContent{
-
-left:25px;
-
-right:25px;
-
-max-width:100%;
-
+.caracteristica h3 {
+  margin-bottom: 11px;
+  color: #154c3d;
+  font-size: 22px;
 }
 
-.heroContent h1{
-
-font-size:38px;
-
+.caracteristica p {
+  color: #6c7671;
+  line-height: 1.7;
 }
 
-.heroContent p{
-
-font-size:17px;
-
-line-height:28px;
-
+.seccionPlatos {
+  padding: 110px 25px 125px;
+  background: #eef4ef;
 }
 
-.title{
-
-font-size:34px;
-
+.encabezado {
+  max-width: 850px;
+  margin: 0 auto 55px;
+  text-align: center;
 }
 
-.grid h2,
-.gridReverse h2{
-
-font-size:34px;
-
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 27px;
+  max-width: 1280px;
+  margin: auto;
 }
 
-.grid p,
-.gridReverse p{
-
-font-size:16px;
-
+.tarjeta {
+  overflow: hidden;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 18px 50px rgba(16, 63, 52, 0.11);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.cards{
-
-grid-template-columns:1fr;
-
+.tarjeta:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 28px 65px rgba(16, 63, 52, 0.18);
 }
 
-.galleryGrid{
-
-grid-template-columns:1fr;
-
+.imagenContenedor {
+  position: relative;
+  width: 100%;
+  height: 255px;
+  overflow: hidden;
+  background: #d8dfda;
 }
 
-.galleryGrid img{
-
-height:240px;
-
+.imagen {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s ease;
 }
 
-.whyGrid{
-
-grid-template-columns:1fr;
-
+.tarjeta:hover .imagen {
+  transform: scale(1.08);
 }
 
-.cta{
-
-padding:90px 20px;
-
+.categoria {
+  position: absolute;
+  left: 18px;
+  bottom: 17px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 750;
+  background: rgba(8, 47, 36, 0.88);
+  backdrop-filter: blur(9px);
 }
 
-.cta h2{
-
-font-size:34px;
-
+.contenido {
+  padding: 26px;
 }
 
-.cta p{
-
-width:100%;
-
-font-size:17px;
-
+.contenido h3 {
+  margin-bottom: 13px;
+  color: #14513f;
+  font-size: 26px;
 }
 
-.button{
-
-width:100%;
-
-max-width:280px;
-
+.contenido p {
+  color: #68726d;
+  font-size: 16px;
+  line-height: 1.75;
 }
 
+.invitacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 45px;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 50px;
+  border-radius: 30px;
+  background:
+    radial-gradient(
+      circle at right top,
+      rgba(90, 230, 46, 0.22),
+      transparent 38%
+    ),
+    #123f34;
 }
 
-/*==================================================
-            SCROLL SUAVE
-==================================================*/
-
-html{
-
-    scroll-behavior:smooth;
-
+.invitacion h2 {
+  max-width: 750px;
+  color: #ffffff;
 }
 
-/*==================================================
-            ANIMACIONES
-==================================================*/
-
-.card,
-.whyGrid div,
-.galleryGrid img{
-
-    animation:fadeUp .8s ease;
-
+.invitacion p {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 18px;
+  line-height: 1.75;
 }
 
-@keyframes fadeUp{
-
-0%{
-
-opacity:0;
-
-transform:translateY(40px);
-
+.botonOscuro {
+  flex-shrink: 0;
+  color: #123f34;
+  background: #5ae62e;
 }
 
-100%{
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-opacity:1;
-
-transform:translateY(0);
-
+  .invitacion {
+    margin: 75px 25px;
+  }
 }
 
+@media (max-width: 800px) {
+  .caracteristicas {
+    grid-template-columns: 1fr;
+  }
+
+  .invitacion {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
-/*==================================================
-            SELECCIÓN DE TEXTO
-==================================================*/
+@media (max-width: 620px) {
+  .hero {
+    min-height: 92vh;
+  }
 
-::selection{
+  .heroContenido {
+    width: auto;
+    padding: 135px 23px 75px;
+    margin-left: 0;
+  }
 
-background:#37d20d;
+  .heroContenido h1 {
+    letter-spacing: -2px;
+  }
 
-color:white;
+  .presentacion,
+  .seccionPlatos {
+    padding: 80px 17px;
+  }
 
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .imagenContenedor {
+    height: 245px;
+  }
+
+  .invitacion {
+    margin: 55px 16px;
+    padding: 32px 24px;
+  }
 }
