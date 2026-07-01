@@ -1,487 +1,201 @@
-import Image from "next/image";
 import styles from "./gastronomia.module.css";
 
-export default function Gastronomia() {
+const platos = [
+  {
+    nombre: "Caldo Verde",
+    categoria: "Sopa tradicional",
+    imagen: "/images/gastronomia/caldo-verde.jpg",
+    descripcion:
+      "Sopa tradicional de Cajamarca preparada con papa, quesillo, huevo y hierbas aromáticas. Es muy consumida durante los desayunos y las mañanas frías.",
+  },
+  {
+    nombre: "Cuy Frito",
+    categoria: "Cocina andina",
+    imagen: "/images/gastronomia/cuy-frito.jpg",
+    descripcion:
+      "Plato representativo de la sierra peruana, servido con papas doradas, ensalada, mote y ají preparado de manera casera.",
+  },
+  {
+    nombre: "Chicharrón con Mote",
+    categoria: "Plato típico",
+    imagen: "/images/gastronomia/chicharron-mote.jpg",
+    descripcion:
+      "Carne de cerdo dorada y crocante acompañada de mote, papa, cancha y salsa criolla. Es ideal para compartir en familia.",
+  },
+  {
+    nombre: "Humitas",
+    categoria: "Tradición del maíz",
+    imagen: "/images/gastronomia/humitas.jpg",
+    descripcion:
+      "Preparadas con maíz molido y envueltas en pancas. Pueden ser dulces o saladas y suelen acompañarse con café o queso.",
+  },
+  {
+    nombre: "Tamales",
+    categoria: "Desayuno tradicional",
+    imagen: "/images/gastronomia/tamales.jpg",
+    descripcion:
+      "Masa de maíz sazonada, rellena y cocida dentro de hojas. Es una preparación muy apreciada durante desayunos y celebraciones.",
+  },
+  {
+    nombre: "Queso Cajamarquino",
+    categoria: "Producto regional",
+    imagen: "/images/gastronomia/queso-cajamarca.jpg",
+    descripcion:
+      "Producto elaborado con leche de la región. Destaca por su textura, sabor y presencia en numerosos platos y desayunos tradicionales.",
+  },
+  {
+    nombre: "Mote con Queso",
+    categoria: "Sabor campesino",
+    imagen: "/images/gastronomia/mote.jpg",
+    descripcion:
+      "Una combinación sencilla y deliciosa de mote cocido con queso fresco o quesillo, tradicional en hogares y comunidades rurales.",
+  },
+  {
+    nombre: "Manjar Blanco",
+    categoria: "Dulce tradicional",
+    imagen: "/images/gastronomia/manjar-blanco.jpg",
+    descripcion:
+      "Dulce preparado principalmente con leche y azúcar, cocido lentamente hasta obtener una consistencia cremosa y un sabor intenso.",
+  },
+  {
+    nombre: "Rosquitas",
+    categoria: "Panadería tradicional",
+    imagen: "/images/gastronomia/rosquitas.jpg",
+    descripcion:
+      "Pequeñas rosquitas horneadas, crocantes y aromáticas. Son perfectas para acompañar una taza de café, chocolate o infusión.",
+  },
+];
+
+const caracteristicas = [
+  {
+    icono: "🌽",
+    titulo: "Ingredientes locales",
+    texto:
+      "Maíz, papa, mote, hierbas aromáticas, queso y productos cultivados en la región.",
+  },
+  {
+    icono: "🧀",
+    titulo: "Tradición quesera",
+    texto:
+      "Cajamarca es reconocida por sus quesos, quesillos y derivados elaborados con leche.",
+  },
+  {
+    icono: "🍲",
+    titulo: "Recetas familiares",
+    texto:
+      "Preparaciones transmitidas entre generaciones y presentes en fiestas y reuniones.",
+  },
+];
+
+export const metadata = {
+  title: "Gastronomía de Celendín",
+  description:
+    "Conoce los platos típicos, productos regionales y dulces tradicionales de Celendín y Cajamarca.",
+};
+
+export default function GastronomiaPage() {
   return (
-    <>
-
-      {/*================ HERO =================*/}
-
+    <main className={styles.pagina}>
       <section className={styles.hero}>
-
-        <Image
-          src="/gastronomia-banner.jpg"
-          alt="Gastronomía de Celendín"
-          fill
-          priority
-          className={styles.heroImage}
+        <img
+          src="/images/gastronomia/portada-gastronomia.jpg"
+          alt="Gastronomía tradicional de Celendín y Cajamarca"
+          className={styles.heroImagen}
         />
 
-        <div className={styles.overlay}></div>
+        <div className={styles.heroOverlay} />
 
-        <div className={styles.heroContent}>
+        <div className={styles.heroContenido}>
+          <span className={styles.etiqueta}>Sabores de nuestra tierra</span>
 
-          <h1>Gastronomía de Celendín</h1>
+          <h1>
+            Gastronomía de
+            <strong> Celendín</strong>
+          </h1>
 
           <p>
-            Descubre los sabores auténticos de Celendín, una tierra donde la
-            tradición culinaria se mantiene viva gracias a sus recetas,
-            ingredientes naturales y el talento de su gente.
+            Descubre una cocina llena de tradición, ingredientes naturales
+            y recetas que forman parte de la identidad de Celendín y
+            Cajamarca.
           </p>
 
+          <a href="#platos" className={styles.boton}>
+            Conocer los platos
+          </a>
         </div>
-
       </section>
 
-      {/*================ INTRODUCCIÓN =================*/}
+      <section className={styles.presentacion}>
+        <span>Una cocina llena de tradición</span>
 
-      <section className={styles.intro}>
+        <h2>Sabores que cuentan nuestra historia</h2>
 
-        <div className={styles.container}>
+        <p>
+          La gastronomía de Celendín reúne productos de los campos andinos,
+          técnicas familiares y preparaciones que se disfrutan durante todo
+          el año.
+        </p>
 
-          <div className={styles.grid}>
-
-            <div>
-
-              <h2>Una cocina llena de tradición</h2>
-
-              <p>
-                La gastronomía de Celendín representa una mezcla de historia,
-                cultura y tradición. Sus platos típicos son preparados con
-                ingredientes frescos provenientes del campo, conservando los
-                sabores que han pasado de generación en generación.
-              </p>
-
-              <p>
-                Cada receta refleja la identidad del pueblo celendino y forma
-                parte de las costumbres familiares, especialmente durante las
-                festividades y reuniones tradicionales.
-              </p>
-
-            </div>
-
-            <div className={styles.imageBox}>
-
-              <Image
-                src="/gastronomia1.jpg"
-                alt="Comida típica"
-                width={650}
-                height={450}
-              />
-
-            </div>
-
-          </div>
-
+        <div className={styles.caracteristicas}>
+          {caracteristicas.map((item) => (
+            <article className={styles.caracteristica} key={item.titulo}>
+              <div className={styles.icono}>{item.icono}</div>
+              <h3>{item.titulo}</h3>
+              <p>{item.texto}</p>
+            </article>
+          ))}
         </div>
-
       </section>
 
-      {/*================ PLATOS =================*/}
-
-      <section className={styles.platos}>
-
-        <div className={styles.container}>
-
-          <h2 className={styles.title}>
-            Platos Típicos
-          </h2>
-
-          <div className={styles.cards}>
-
-            {/* Tarjeta 1 */}
-
-            <div className={styles.card}>
-
-              <Image
-                src="/gastronomia2.jpg"
-                alt="Caldo Verde"
-                width={500}
-                height={350}
-              />
-
-              <div className={styles.info}>
-
-                <h3>Caldo Verde</h3>
-
-                <p>
-                  Tradicional sopa preparada con papas, queso, hierbas
-                  aromáticas y huevo, muy consumida durante los desayunos.
-                </p>
-
-              </div>
-
-            </div>
-
-            {/* Tarjeta 2 */}
-
-            <div className={styles.card}>
-
-              <Image
-                src="/gastronomia3.jpg"
-                alt="Cuy Frito"
-                width={500}
-                height={350}
-              />
-
-              <div className={styles.info}>
-
-                <h3>Cuy Frito</h3>
-
-                <p>
-                  Uno de los platos más representativos de la sierra peruana,
-                  acompañado de papas, ensalada y ají casero.
-                </p>
-
-              </div>
-
-            </div>
-
-            {/* Tarjeta 3 */}
-
-            <div className={styles.card}>
-
-              <Image
-                src="/gastronomia4.jpg"
-                alt="Chicharrón"
-                width={500}
-                height={350}
-              />
-
-              <div className={styles.info}>
-
-                <h3>Chicharrón</h3>
-
-                <p>
-                  Delicioso plato preparado con carne de cerdo, servido con
-                  mote, papas y salsa criolla.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/*================ BEBIDAS =================*/}
-
-      <section className={styles.bebidas}>
-
-        <div className={styles.container}>
-
-          <div className={styles.gridReverse}>
-
-            <div className={styles.imageBox}>
-
-              <Image
-                src="/gastronomia5.jpg"
-                alt="Bebidas"
-                width={650}
-                height={450}
-              />
-
-            </div>
-
-            <div>
-
-              <h2>Bebidas Tradicionales</h2>
-
-              <p>
-                Celendín también destaca por sus bebidas típicas elaboradas con
-                ingredientes naturales, ideales para acompañar cualquier comida
-                tradicional.
-              </p>
-
-              <p>
-                Entre las más conocidas se encuentran la chicha de jora, las
-                infusiones de hierbas y bebidas preparadas con frutas propias
-                de la región.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-            {/*================ PRODUCTOS LOCALES =================*/}
-
-      <section className={styles.productos}>
-
-        <div className={styles.container}>
-
-          <h2 className={styles.title}>
-            Productos Locales
-          </h2>
-
-          <div className={styles.cards}>
-
-            <div className={styles.card}>
-
-              <Image
-                src="/gastronomia6.jpg"
-                alt="Queso artesanal"
-                width={500}
-                height={350}
-              />
-
-              <div className={styles.info}>
-
-                <h3>Queso Artesanal</h3>
-
-                <p>
-                  Elaborado con leche fresca de la región, el queso artesanal
-                  de Celendín destaca por su sabor, textura y calidad, siendo
-                  uno de los productos más apreciados por visitantes y
-                  pobladores.
-                </p>
-
-              </div>
-
-            </div>
-
-            <div className={styles.card}>
-
-              <Image
-                src="/gastronomia7.jpg"
-                alt="Miel"
-                width={500}
-                height={350}
-              />
-
-              <div className={styles.info}>
-
-                <h3>Miel Natural</h3>
-
-                <p>
-                  La miel producida en Celendín es reconocida por su pureza,
-                  aroma y propiedades nutritivas, gracias a la diversidad de
-                  flores presentes en la zona.
-                </p>
-
-              </div>
-
-            </div>
-
-            <div className={styles.card}>
-
-              <Image
-                src="/gastronomia8.jpg"
-                alt="Productos agrícolas"
-                width={500}
-                height={350}
-              />
-
-              <div className={styles.info}>
-
-                <h3>Productos Agrícolas</h3>
-
-                <p>
-                  Papa, maíz, trigo, habas y otros cultivos forman parte de la
-                  riqueza agrícola que abastece los hogares y mercados de la
-                  provincia.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/*================ POSTRES =================*/}
-
-      <section className={styles.postres}>
-
-        <div className={styles.container}>
-
-          <div className={styles.grid}>
-
-            <div>
-
-              <h2>Postres Tradicionales</h2>
-
-              <p>
-                Los dulces típicos de Celendín son preparados siguiendo recetas
-                familiares que conservan el sabor de antaño.
-              </p>
-
-              <p>
-                Entre ellos destacan los dulces de leche, manjar blanco,
-                mermeladas artesanales y otros postres elaborados con productos
-                naturales de la región.
-              </p>
-
-            </div>
-
-            <div className={styles.imageBox}>
-
-              <Image
-                src="/gastronomia9.jpg"
-                alt="Postres"
-                width={650}
-                height={450}
-              />
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/*================ GALERÍA =================*/}
-
-      <section className={styles.gallery}>
-
-        <div className={styles.container}>
-
-          <h2 className={styles.title}>
-            Galería Gastronómica
-          </h2>
-
-          <div className={styles.galleryGrid}>
-
-            <Image
-              src="/gastronomia10.jpg"
-              alt="Plato típico"
-              width={500}
-              height={350}
-            />
-
-            <Image
-              src="/gastronomia11.jpg"
-              alt="Comida"
-              width={500}
-              height={350}
-            />
-
-            <Image
-              src="/gastronomia12.jpg"
-              alt="Tradición"
-              width={500}
-              height={350}
-            />
-
-            <Image
-              src="/gastronomia13.jpg"
-              alt="Restaurante"
-              width={500}
-              height={350}
-            />
-
-            <Image
-              src="/gastronomia14.jpg"
-              alt="Mercado"
-              width={500}
-              height={350}
-            />
-
-            <Image
-              src="/gastronomia15.jpg"
-              alt="Gastronomía"
-              width={500}
-              height={350}
-            />
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/*================ ¿POR QUÉ PROBAR? =================*/}
-
-      <section className={styles.why}>
-
-        <div className={styles.container}>
-
-          <h2 className={styles.title}>
-            ¿Por qué disfrutar la gastronomía de Celendín?
-          </h2>
-
-          <div className={styles.whyGrid}>
-
-            <div>
-
-              <h3>🌿 Ingredientes Naturales</h3>
-
-              <p>
-                Los platos son preparados con productos frescos provenientes
-                directamente del campo.
-              </p>
-
-            </div>
-
-            <div>
-
-              <h3>👨‍🍳 Tradición Familiar</h3>
-
-              <p>
-                Las recetas han sido transmitidas de generación en generación,
-                conservando su sabor original.
-              </p>
-
-            </div>
-
-            <div>
-
-              <h3>🥘 Gran Variedad</h3>
-
-              <p>
-                Desde sopas y platos fuertes hasta postres y bebidas
-                tradicionales, existe una amplia oferta gastronómica.
-              </p>
-
-            </div>
-
-            <div>
-
-              <h3>❤️ Identidad Cultural</h3>
-
-              <p>
-                Cada plato representa parte de la historia y las costumbres del
-                pueblo celendino.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/*================ CTA =================*/}
-
-      <section className={styles.cta}>
-
-        <div className={styles.container}>
-
-          <h2>¡Ven y disfruta los sabores de Celendín!</h2>
-
+      <section id="platos" className={styles.seccionPlatos}>
+        <div className={styles.encabezado}>
+          <span>Platos y productos regionales</span>
+          <h2>Gastronomía tradicional</h2>
           <p>
-            La gastronomía celendina es una experiencia que combina tradición,
-            cultura y el auténtico sabor de la sierra cajamarquina.
+            Conoce algunas de las preparaciones y productos más apreciados
+            en Celendín y la región Cajamarca.
           </p>
-
-          <button className={styles.button}>
-            Descubrir Más
-          </button>
-
         </div>
 
+        <div className={styles.grid}>
+          {platos.map((plato) => (
+            <article className={styles.tarjeta} key={plato.nombre}>
+              <div className={styles.imagenContenedor}>
+                <img
+                  src={plato.imagen}
+                  alt={plato.nombre}
+                  loading="lazy"
+                  className={styles.imagen}
+                />
+
+                <span className={styles.categoria}>
+                  {plato.categoria}
+                </span>
+              </div>
+
+              <div className={styles.contenido}>
+                <h3>{plato.nombre}</h3>
+                <p>{plato.descripcion}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
 
-    </>
+      <section className={styles.invitacion}>
+        <div>
+          <span>Experiencia gastronómica</span>
+          <h2>Disfruta los sabores de Celendín</h2>
+          <p>
+            Visita mercados, restaurantes y cocinas familiares para conocer
+            las recetas y productos de nuestra provincia.
+          </p>
+        </div>
+
+        <a href="/contactanos" className={styles.botonOscuro}>
+          Contáctanos
+        </a>
+      </section>
+    </main>
   );
 }

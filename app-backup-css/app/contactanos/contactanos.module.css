@@ -1,0 +1,561 @@
+/*==================================================
+                HERO
+==================================================*/
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.heroImage {
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.60),
+        rgba(0, 0, 0, 0.60)
+    );
+    z-index: 1;
+}
+
+.heroContent {
+    position: absolute;
+    top: 55%;
+    left: 8%;
+    transform: translateY(-50%);
+    max-width: 650px;
+    color: #fff;
+    z-index: 2;
+}
+
+.heroContent h1 {
+    font-size: 68px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 5px 15px rgba(0,0,0,.4);
+}
+
+.heroContent p {
+    font-size: 22px;
+    line-height: 38px;
+}
+
+/*==================================================
+                GENERAL
+==================================================*/
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.title {
+    font-size: 46px;
+    color: #0c6248;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 60px;
+}
+
+/*==================================================
+          INFORMACIÓN DE CONTACTO
+==================================================*/
+
+.info {
+    padding: 110px 0;
+    background: #f8faf9;
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: .4s;
+    box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    margin-bottom: 25px;
+    border-radius: 50%;
+    background: #37d20d;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+}
+
+.card h3 {
+    color: #0c6248;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #666;
+    line-height: 30px;
+    font-size: 17px;
+}
+
+/*==================================================
+                FORMULARIO
+==================================================*/
+
+.formSection {
+    padding: 110px 0;
+    background: white;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 70px;
+    align-items: center;
+}
+
+.formText h2 {
+    font-size: 42px;
+    color: #0c6248;
+    margin-bottom: 25px;
+}
+
+.formText p {
+    color: #666;
+    line-height: 34px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form input {
+    padding: 18px;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: .3s;
+}
+
+.form textarea {
+    padding: 18px;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    transition: .3s;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color: #37d20d;
+    box-shadow: 0 0 12px rgba(55,210,13,.25);
+}
+
+.button {
+    padding: 18px;
+    border: none;
+    border-radius: 50px;
+    background: #37d20d;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.button:hover {
+    background: #0c6248;
+    transform: translateY(-5px);
+}
+/*==================================================
+                    MAPA
+==================================================*/
+
+.mapSection {
+    padding: 110px 0;
+    background: #f5f8f7;
+}
+
+.mapContainer {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.mapImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform .5s ease;
+}
+
+.mapContainer:hover .mapImage {
+    transform: scale(1.05);
+}
+
+/*==================================================
+                    EQUIPO
+==================================================*/
+
+.team {
+    padding: 110px 0;
+    background: #ffffff;
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 35px;
+    margin-top: 60px;
+}
+
+.member {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: .4s;
+    box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
+
+.member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+.member img {
+    border-radius: 50%;
+    border: 5px solid #37d20d;
+    margin-bottom: 20px;
+    transition: transform .4s;
+}
+
+.member:hover img {
+    transform: scale(1.08);
+}
+
+.member h3 {
+    color: #0c6248;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.member span {
+    display: block;
+    color: #37d20d;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.member p {
+    color: #666;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+/*==================================================
+                REDES SOCIALES
+==================================================*/
+
+.social {
+    padding: 110px 0;
+    background: #f8faf9;
+}
+
+.socialGrid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.socialCard {
+    background: white;
+    border-radius: 18px;
+    padding: 35px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: .4s;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.socialCard:hover {
+    transform: translateY(-10px);
+    background: #37d20d;
+}
+
+.socialCard:hover h3,
+.socialCard:hover p {
+    color: white;
+}
+
+.socialCard h3 {
+    color: #0c6248;
+    font-size: 22px;
+    margin-bottom: 15px;
+    transition: .4s;
+}
+
+.socialCard p {
+    color: #666;
+    transition: .4s;
+    font-size: 16px;
+}
+
+/*==================================================
+                EFECTOS
+==================================================*/
+
+.card,
+.member,
+.socialCard {
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before,
+.member::before,
+.socialCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.25),
+        transparent
+    );
+    transition: left .8s;
+}
+
+.card:hover::before,
+.member:hover::before,
+.socialCard:hover::before {
+    left: 120%;
+}
+
+/*==================================================
+                CTA FINAL
+==================================================*/
+
+.cta {
+    padding: 120px 0;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(
+        rgba(12, 98, 72, 0.85),
+        rgba(55, 210, 13, 0.75)
+    ),
+    url("/contactanos-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cta h2 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    width: 70%;
+    margin: auto;
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 40px;
+}
+
+.cta .button {
+    background: white;
+    color: #0c6248;
+}
+
+.cta .button:hover {
+    background: #37d20d;
+    color: white;
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media (max-width: 992px) {
+
+    .heroContent {
+        left: 5%;
+        max-width: 500px;
+    }
+
+    .heroContent h1 {
+        font-size: 52px;
+    }
+
+    .heroContent p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .infoGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .teamGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .socialGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta p {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        height: 80vh;
+    }
+
+    .heroContent {
+        left: 25px;
+        right: 25px;
+        max-width: 100%;
+    }
+
+    .heroContent h1 {
+        font-size: 40px;
+    }
+
+    .heroContent p {
+        font-size: 17px;
+        line-height: 28px;
+    }
+
+    .title {
+        font-size: 34px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .infoGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .teamGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .socialGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        padding: 90px 20px;
+    }
+
+    .cta h2 {
+        font-size: 34px;
+    }
+
+    .cta p {
+        width: 100%;
+        font-size: 17px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+}
+
+/*==================================================
+                ANIMACIONES
+==================================================*/
+
+.heroContent {
+    animation: aparecer 1s ease;
+}
+
+.card {
+    animation: aparecer 1s ease;
+}
+
+.member {
+    animation: aparecer 1s ease;
+}
+
+.socialCard {
+    animation: aparecer 1s ease;
+}
+
+.mapContainer {
+    animation: aparecer 1s ease;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}

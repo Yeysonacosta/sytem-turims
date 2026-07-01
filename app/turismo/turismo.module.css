@@ -1,795 +1,355 @@
-/* ==================================================
-   HERO
-================================================== */
-
-.hero{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+.pagina {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #f7faf8;
 }
 
-.heroImage{
-    object-fit: cover;
-    z-index: 1;
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #143c35;
 }
 
-.overlay{
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        rgba(0,0,0,.55),
-        rgba(0,0,0,.55)
-    );
-    z-index: 2;
+.heroImagen {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.88) contrast(1.05);
 }
 
-.heroContent{
-    position: absolute;
-    top: 55%;
-    left: 8%;
-    transform: translateY(-50%);
-    max-width: 650px;
-    color: white;
-    z-index: 3;
-    animation: fadeUp 1.2s ease;
-}
-
-.heroContent h1{
-    font-size: 70px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-shadow: 3px 3px 10px rgba(0,0,0,.4);
-}
-
-.heroContent p{
-    font-size: 22px;
-    line-height: 38px;
-    color: #f4f4f4;
-}
-
-/* ==================================================
-   CONTENEDOR GENERAL
-================================================== */
-
-.container{
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.title{
-    text-align: center;
-    font-size: 45px;
-    color: #0c6248;
-    margin-bottom: 60px;
-}
-
-/* ==================================================
-   INTRODUCCIÓN
-================================================== */
-
-.intro{
-    padding: 110px 0;
-    background: white;
-}
-
-.grid{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 70px;
-    align-items: center;
-}
-
-.grid h2{
-    font-size: 45px;
-    color: #0c6248;
-    margin-bottom: 25px;
-}
-
-.grid p{
-    font-size: 18px;
-    color: #555;
-    text-align: justify;
-    line-height: 34px;
-    margin-bottom: 18px;
-}
-
-/* ==================================================
-   IMÁGENES
-================================================== */
-
-.imageBox{
-    overflow: hidden;
-    border-radius: 18px;
-    box-shadow: 0 20px 40px rgba(0,0,0,.15);
-}
-
-.imageBox img{
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: .6s;
-}
-
-.imageBox:hover img{
-    transform: scale(1.08);
-}
-
-/* ==================================================
-   LUGARES TURÍSTICOS
-================================================== */
-
-.lugares{
-    padding: 100px 0;
-    background: #f8faf9;
-}
-
-.cards{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 35px;
-}
-
-.card{
-    background: white;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 12px 30px rgba(0,0,0,.08);
-    transition: .4s;
-}
-
-.card:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,.18);
-}
-
-.card img{
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: .5s;
-}
-
-.card:hover img{
-    transform: scale(1.08);
-}
-
-.info{
-    padding: 25px;
-}
-
-.info h3{
-    color: #0c6248;
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.info p{
-    color: #666;
-    line-height: 30px;
-    text-align: justify;
-}
-
-/* ==================================================
-   EXPERIENCIA
-================================================== */
-
-.experience{
-    padding: 110px 0;
-    background: white;
-}
-
-.gridReverse{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 70px;
-    align-items: center;
-}
-
-.gridReverse h2{
-    font-size: 42px;
-    color: #0c6248;
-    margin-bottom: 25px;
-}
-
-.gridReverse p{
-    color: #555;
-    line-height: 34px;
-    font-size: 18px;
-    text-align: justify;
-    margin-bottom: 18px;
-}
-
-/* ==================================================
-   ANIMACIÓN
-================================================== */
-
-@keyframes fadeUp{
-
-    from{
-        opacity:0;
-        transform: translateY(40px);
-    }
-
-    to{
-        opacity:1;
-        transform: translateY(0);
-    }
-
-}
-/*==================================================
-  ACTIVIDADES
-==================================================*/
-
-.actividades{
-    padding: 100px 0;
-    background: #f5f8f7;
-}
-
-.activityGrid{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 30px;
-    margin-top: 60px;
-}
-
-.activityCard{
-
-    background: white;
-
-    padding: 35px;
-
-    border-radius: 20px;
-
-    text-align: center;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,.08);
-
-    transition: .4s;
-
-    border-top: 5px solid #38b000;
-
-}
-
-.activityCard:hover{
-
-    transform: translateY(-10px);
-
-    box-shadow: 0 20px 40px rgba(0,0,0,.15);
-
-}
-
-.activityCard h3{
-
-    color: #0c6248;
-
-    margin-bottom: 20px;
-
-    font-size: 24px;
-
-}
-
-.activityCard p{
-
-    color: #666;
-
-    line-height: 30px;
-
-    text-align: justify;
-
-    font-size: 17px;
-
-}
-
-/*==================================================
-  GALERÍA
-==================================================*/
-
-.gallery{
-
-    padding: 110px 0;
-
-    background: white;
-
-}
-
-.galleryGrid{
-
-    display: grid;
-
-    grid-template-columns: repeat(3,1fr);
-
-    gap: 25px;
-
-    margin-top: 60px;
-
-}
-
-.galleryGrid img{
-
-    width: 100%;
-
-    height: 280px;
-
-    object-fit: cover;
-
-    border-radius: 18px;
-
-    cursor: pointer;
-
-    transition: .5s;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,.12);
-
-}
-
-.galleryGrid img:hover{
-
-    transform: scale(1.05);
-
-    box-shadow: 0 25px 45px rgba(0,0,0,.25);
-
-}
-
-/*==================================================
-  POR QUÉ VISITAR
-==================================================*/
-
-.why{
-
-    padding: 110px 0;
-
-    background: linear-gradient(
-        to bottom,
-        #f8faf9,
-        #eef7f2
-    );
-
-}
-
-.whyGrid{
-
-    display: grid;
-
-    grid-template-columns: repeat(2,1fr);
-
-    gap: 35px;
-
-    margin-top: 60px;
-
-}
-
-.whyGrid div{
-
-    background: white;
-
-    padding: 35px;
-
-    border-radius: 20px;
-
-    transition: .4s;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-
-}
-
-.whyGrid div:hover{
-
-    transform: translateY(-8px);
-
-}
-
-.whyGrid h3{
-
-    color: #0c6248;
-
-    margin-bottom: 18px;
-
-    font-size: 26px;
-
-}
-
-.whyGrid p{
-
-    color: #666;
-
-    font-size: 17px;
-
-    line-height: 30px;
-
-    text-align: justify;
-
-}
-
-/*==================================================
-  BOTONES
-==================================================*/
-
-.button{
-
-    padding: 18px 45px;
-
-    background: #37d20d;
-
-    color: white;
-
-    border: none;
-
-    border-radius: 50px;
-
-    font-size: 18px;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: .4s;
-
-}
-
-.button:hover{
-
-    background: #1d8c00;
-
-    transform: translateY(-5px);
-
-    box-shadow: 0 15px 30px rgba(0,0,0,.2);
-
-}
-
-/*==================================================
-  EFECTOS
-==================================================*/
-
-.card img,
-.galleryGrid img,
-.imageBox img{
-
-    transition: transform .5s ease;
-
-}
-
-.card:hover img{
-
-    transform: scale(1.08);
-
-}
-
-.imageBox:hover img{
-
-    transform: scale(1.08);
-
-}
-
-.galleryGrid img:hover{
-
-    transform: scale(1.08);
-
-}
-/*==================================================
-    CTA FINAL
-==================================================*/
-
-.cta{
-    width:100%;
-    padding:120px 0;
-    text-align:center;
-
-    background: linear-gradient(
-        135deg,
-        rgba(12,98,72,.95),
-        rgba(55,210,13,.90)
+.heroCapa {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.67) 42%,
+      rgba(0, 0, 0, 0.36) 100%
     ),
-    url("/turismo-banner.jpg");
-
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-
-    color:white;
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.10) 65%,
+      rgba(0, 0, 0, 0.20) 100%
+    );
 }
 
-.cta h2{
-
-    font-size:55px;
-
-    margin-bottom:25px;
-
-    font-weight:700;
-
+.heroContenido {
+  position: relative;
+  z-index: 2;
+  width: min(780px, 90%);
+  margin-left: 8%;
+  padding: 160px 0 90px;
+  color: #ffffff;
 }
 
-.cta p{
-
-    width:70%;
-
-    margin:auto;
-
-    font-size:20px;
-
-    line-height:35px;
-
-    margin-bottom:40px;
-
+.etiqueta,
+.introduccion > span,
+.encabezado > span,
+.recomendacion span {
+  display: inline-block;
+  color: #53e72c;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.button{
-
-    padding:18px 45px;
-
-    border:none;
-
-    border-radius:50px;
-
-    background:white;
-
-    color:#0c6248;
-
-    font-size:18px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:.4s;
-
+.heroContenido h1 {
+  max-width: 760px;
+  margin: 18px 0 25px;
+  font-size: clamp(55px, 8vw, 105px);
+  line-height: 0.94;
+  letter-spacing: -4px;
 }
 
-.button:hover{
-
-    background:#37d20d;
-
-    color:white;
-
-    transform:translateY(-6px);
-
-    box-shadow:0 15px 35px rgba(0,0,0,.25);
-
+.heroContenido h1 strong {
+  display: block;
+  color: #55e930;
 }
 
-/*==================================================
-    SCROLL SUAVE
-==================================================*/
-
-html{
-
-    scroll-behavior:smooth;
-
+.heroContenido p {
+  max-width: 690px;
+  margin-bottom: 35px;
+  color: rgba(255, 255, 255, 0.91);
+  font-size: clamp(18px, 2vw, 23px);
+  line-height: 1.75;
 }
 
-/*==================================================
-    RESPONSIVE TABLET
-==================================================*/
-
-@media(max-width:992px){
-
-.heroContent{
-
-left:5%;
-
-max-width:500px;
-
+.boton,
+.botonClaro {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 31px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.heroContent h1{
-
-font-size:50px;
-
+.boton {
+  color: #10382f;
+  background: #55e930;
+  box-shadow: 0 15px 35px rgba(85, 233, 48, 0.27);
 }
 
-.heroContent p{
-
-font-size:18px;
-
-line-height:30px;
-
+.boton:hover,
+.botonClaro:hover {
+  transform: translateY(-4px);
 }
 
-.grid,
-.gridReverse{
-
-grid-template-columns:1fr;
-
-gap:40px;
-
+.introduccion {
+  max-width: 1250px;
+  margin: auto;
+  padding: 110px 25px;
+  text-align: center;
 }
 
-.cards{
-
-grid-template-columns:repeat(2,1fr);
-
+.introduccion h2,
+.encabezado h2,
+.recomendacion h2 {
+  margin: 14px 0 20px;
+  color: #134a3d;
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.08;
 }
 
-.activityGrid{
-
-grid-template-columns:repeat(2,1fr);
-
+.introduccion > p,
+.encabezado > p {
+  max-width: 790px;
+  margin: auto;
+  color: #66736d;
+  font-size: 18px;
+  line-height: 1.85;
 }
 
-.galleryGrid{
-
-grid-template-columns:repeat(2,1fr);
-
+.experiencias {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 21px;
+  margin-top: 55px;
 }
 
-.whyGrid{
-
-grid-template-columns:1fr;
-
+.experiencia {
+  padding: 31px 24px;
+  border: 1px solid #e0ebe5;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(17, 68, 55, 0.08);
 }
 
-.cta h2{
-
-font-size:42px;
-
+.icono {
+  margin-bottom: 15px;
+  font-size: 42px;
 }
 
-.cta p{
-
-width:90%;
-
+.experiencia h3 {
+  margin-bottom: 10px;
+  color: #13503e;
+  font-size: 22px;
 }
 
+.experiencia p {
+  color: #68746f;
+  line-height: 1.7;
 }
 
-/*==================================================
-    RESPONSIVE CELULAR
-==================================================*/
-
-@media(max-width:768px){
-
-.hero{
-
-height:85vh;
-
+.seccionLugares {
+  padding: 110px 25px 125px;
+  background: #edf4ef;
 }
 
-.heroContent{
-
-left:25px;
-
-right:25px;
-
-max-width:100%;
-
+.encabezado {
+  max-width: 850px;
+  margin: 0 auto 55px;
+  text-align: center;
 }
 
-.heroContent h1{
-
-font-size:38px;
-
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 27px;
+  max-width: 1300px;
+  margin: auto;
 }
 
-.heroContent p{
-
-font-size:17px;
-
-line-height:28px;
-
+.tarjeta {
+  overflow: hidden;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 18px 50px rgba(16, 64, 52, 0.11);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.title{
-
-font-size:34px;
-
+.tarjeta:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 28px 68px rgba(16, 64, 52, 0.19);
 }
 
-.grid h2,
-.gridReverse h2{
-
-font-size:34px;
-
+.imagenContenedor {
+  position: relative;
+  width: 100%;
+  height: 255px;
+  overflow: hidden;
+  background: #d8e0da;
 }
 
-.grid p,
-.gridReverse p{
-
-font-size:16px;
-
+.imagen {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s ease;
 }
 
-.cards{
-
-grid-template-columns:1fr;
-
+.tarjeta:hover .imagen {
+  transform: scale(1.08);
 }
 
-.activityGrid{
-
-grid-template-columns:1fr;
-
+.tipo {
+  position: absolute;
+  left: 17px;
+  bottom: 16px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 750;
+  background: rgba(5, 48, 37, 0.88);
+  backdrop-filter: blur(9px);
 }
 
-.galleryGrid{
-
-grid-template-columns:1fr;
-
+.contenido {
+  padding: 26px;
 }
 
-.galleryGrid img{
-
-height:240px;
-
+.zona {
+  color: #3cb51a;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.whyGrid{
-
-grid-template-columns:1fr;
-
+.contenido h3 {
+  margin: 9px 0 13px;
+  color: #14513f;
+  font-size: 26px;
 }
 
-.cta{
-
-padding:90px 20px;
-
+.contenido p {
+  color: #65716b;
+  font-size: 16px;
+  line-height: 1.75;
 }
 
-.cta h2{
-
-font-size:34px;
-
+.informacion {
+  margin-top: 19px;
+  padding-top: 16px;
+  border-top: 1px solid #e6ece8;
+  color: #346a59;
+  font-size: 14px;
+  font-weight: 700;
 }
 
-.cta p{
-
-width:100%;
-
-font-size:17px;
-
+.recomendacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 45px;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 50px;
+  border-radius: 30px;
+  background:
+    radial-gradient(
+      circle at right top,
+      rgba(83, 231, 44, 0.22),
+      transparent 38%
+    ),
+    #123f35;
 }
 
-.button{
-
-width:100%;
-
-max-width:280px;
-
+.recomendacion h2 {
+  max-width: 760px;
+  color: #ffffff;
 }
 
+.recomendacion p {
+  max-width: 750px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 18px;
+  line-height: 1.75;
 }
 
-/*==================================================
-    ANIMACIONES
-==================================================*/
-
-.card,
-.activityCard,
-.infoCard,
-.whyGrid div{
-
-animation:fadeUp .8s ease;
-
+.botonClaro {
+  flex-shrink: 0;
+  color: #123f35;
+  background: #55e930;
 }
 
-@keyframes fadeUp{
+@media (max-width: 1050px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-0%{
+  .experiencias {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-opacity:0;
-
-transform:translateY(40px);
-
+  .recomendacion {
+    margin: 75px 25px;
+  }
 }
 
-100%{
-
-opacity:1;
-
-transform:translateY(0);
-
+@media (max-width: 750px) {
+  .recomendacion {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
-}
+@media (max-width: 620px) {
+  .heroContenido {
+    width: auto;
+    margin-left: 0;
+    padding: 140px 23px 75px;
+  }
 
-/*==================================================
-    SELECCIÓN DE TEXTO
-==================================================*/
+  .heroContenido h1 {
+    letter-spacing: -2px;
+  }
 
-::selection{
+  .introduccion,
+  .seccionLugares {
+    padding: 80px 17px;
+  }
 
-background:#37d20d;
+  .grid,
+  .experiencias {
+    grid-template-columns: 1fr;
+  }
 
-color:white;
+  .imagenContenedor {
+    height: 245px;
+  }
 
+  .recomendacion {
+    margin: 55px 16px;
+    padding: 32px 24px;
+  }
 }

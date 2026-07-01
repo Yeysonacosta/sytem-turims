@@ -1,0 +1,282 @@
+import Image from "next/image";
+import styles from "./historia.module.css";
+
+export default function Historia() {
+  return (
+    <>
+      {/* ================= HERO ================= */}
+      <section className={styles.hero}>
+        <div className={styles.overlay}></div>
+
+        <Image
+          src="/historia-banner.jpg"
+          alt="Historia de Celendín"
+          fill
+          priority
+          className={styles.heroImage}
+        />
+
+        <div className={styles.heroContent}>
+          <h1>Historia de Celendín</h1>
+
+          <p>
+            Descubre los orígenes de una de las provincias más importantes de
+            Cajamarca, reconocida por su riqueza histórica, cultural y el
+            espíritu trabajador de su gente.
+          </p>
+        </div>
+      </section>
+
+      {/* ================= INTRODUCCIÓN ================= */}
+
+      <section className={styles.container}>
+
+        <div className={styles.grid}>
+
+          <div>
+
+            <h2>Los orígenes de Celendín</h2>
+
+            <p>
+              Celendín es una provincia ubicada en el departamento de
+              Cajamarca, en la sierra norte del Perú. A lo largo de los años se
+              ha convertido en un importante centro comercial, agrícola,
+              artesanal y turístico gracias a su privilegiada ubicación y a la
+              riqueza cultural heredada de sus antiguos pobladores.
+            </p>
+
+            <p>
+              Su nombre está ligado a diversas teorías históricas. Algunos
+              investigadores sostienen que proviene de antiguos pobladores
+              llegados desde España, mientras que otros indican que tiene
+              relación con pueblos indígenas que ocuparon la región mucho antes
+              de la llegada de los españoles.
+            </p>
+
+          </div>
+
+          <div className={styles.imageBox}>
+
+            <Image
+              src="/historia1.jpg"
+              alt="Celendín antiguo"
+              width={600}
+              height={450}
+            />
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ================= FUNDACIÓN ================= */}
+
+      <section className={styles.sectionGray}>
+
+        <div className={styles.container}>
+
+          <div className={styles.gridReverse}>
+
+            <div className={styles.imageBox}>
+
+              <Image
+                src="/historia2.jpg"
+                alt="Fundación de Celendín"
+                width={600}
+                height={450}
+              />
+
+            </div>
+
+            <div>
+
+              <h2>Fundación de la ciudad</h2>
+
+              <p>
+                La ciudad de Celendín fue fundada oficialmente durante la época
+                colonial. Desde entonces se convirtió en un importante punto de
+                intercambio comercial entre la costa y la sierra, favoreciendo
+                el crecimiento económico de toda la región.
+              </p>
+
+              <p>
+                Durante el Virreinato del Perú, Celendín destacó por el trabajo
+                agrícola, la producción ganadera y el desarrollo de la
+                artesanía, actividades que continúan siendo parte fundamental
+                de su economía.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ================= LÍNEA DE TIEMPO ================= */}
+
+      <section className={styles.timelineSection}>
+
+        <div className={styles.container}>
+
+          <h2 className={styles.center}>
+            Línea del Tiempo
+          </h2>
+
+          <div className={styles.timeline}>
+
+            <div className={styles.card}>
+
+              <span>Antes del siglo XVI</span>
+
+              <h3>Pobladores Originarios</h3>
+
+              <p>
+                Diversos pueblos ocuparon estas tierras desarrollando la
+                agricultura y el comercio entre comunidades vecinas.
+              </p>
+
+            </div>
+
+            <div className={styles.card}>
+
+              <span>Época Colonial</span>
+
+              <h3>Fundación</h3>
+
+              <p>
+                Celendín comienza su crecimiento como villa colonial gracias a
+                su ubicación estratégica y actividad económica.
+              </p>
+
+            </div>
+
+            <div className={styles.card}>
+
+              <span>Siglo XIX</span>
+
+              <h3>Desarrollo</h3>
+
+              <p>
+                La ciudad fortalece sus actividades comerciales, agrícolas y
+                ganaderas convirtiéndose en una de las más importantes de la
+                región.
+              </p>
+
+            </div>
+
+            <div className={styles.card}>
+
+              <span>Actualidad</span>
+
+              <h3>Destino Turístico</h3>
+
+              <p>
+                Hoy Celendín es reconocido por su patrimonio histórico,
+                gastronomía, naturaleza, cultura y hospitalidad.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ================= CULTURA ================= */}
+
+      <section className={styles.container}>
+
+        <h2 className={styles.center}>
+          Cultura y Tradiciones
+        </h2>
+
+        <div className={styles.cards}>
+
+          <div className={styles.infoCard}>
+
+            <Image
+              src="/historia3.jpg"
+              alt="Sombreros"
+              width={400}
+              height={250}
+            />
+
+            <h3>Sombreros de Paja</h3>
+
+            <p>
+              Celendín es reconocido a nivel nacional por la elaboración
+              artesanal de sombreros de paja, una tradición transmitida de
+              generación en generación.
+            </p>
+
+          </div>
+
+          <div className={styles.infoCard}>
+
+            <Image
+              src="/historia4.jpg"
+              alt="Tradiciones"
+              width={400}
+              height={250}
+            />
+
+            <h3>Tradiciones</h3>
+
+            <p>
+              Sus festividades religiosas, ferias patronales y expresiones
+              culturales reflejan la identidad y el orgullo del pueblo
+              celendino.
+            </p>
+
+          </div>
+
+          <div className={styles.infoCard}>
+
+            <Image
+              src="/historia5.jpg"
+              alt="Arquitectura"
+              width={400}
+              height={250}
+            />
+
+            <h3>Arquitectura Colonial</h3>
+
+            <p>
+              Las casonas, iglesias y plazas conservan una arquitectura que
+              recuerda el importante legado colonial de la ciudad.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ================= FRASE FINAL ================= */}
+
+      <section className={styles.final}>
+
+        <div className={styles.container}>
+
+          <h2>
+            Celendín: Historia, Cultura y Tradición
+          </h2>
+
+          <p>
+            Conocer la historia de Celendín es comprender el esfuerzo, la
+            identidad y las costumbres de un pueblo que ha sabido conservar sus
+            raíces mientras continúa desarrollándose como uno de los principales
+            destinos turísticos de la región Cajamarca.
+          </p>
+
+        </div>
+
+      </section>
+
+    </>
+  );
+}

@@ -1,11 +1,9 @@
-import Navbar from "./components/Navbar";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <main className={styles.main}>
+<main className={styles.main}>
         <div className={styles.hero}>
           <h1>Bienvenidos a Celendín</h1>
           <p>
