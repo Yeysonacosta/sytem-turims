@@ -1,7 +1,13 @@
+import { createHash, randomBytes } from "node:crypto";
 import { SignJWT, jwtVerify } from "jose";
 
+// Cookie del access token (JWT corto). Se llama igual que antes.
 export const COOKIE_SESION = "admin_session";
-export const DURACION_SEGUNDOS = 60 * 60 * 8; // 8 horas
+// Cookie del refresh token (texto aleatorio, largo). Su hash vive en la BD.
+export const COOKIE_REFRESH = "admin_refresh";
+
+export const DURACION_ACCESO_SEGUNDOS = 60 * 15; // 15 minutos
+export const DURACION_REFRESH_SEGUNDOS = 60 * 60 * 24 * 7; // 7 días
 
 function clave() {
   const secreto = process.env.SESSION_SECRET;
@@ -11,16 +17,17 @@ function clave() {
   return new TextEncoder().encode(secreto);
 }
 
-export async function firmarToken(adminId) {
-  return new SignJWT({ sub: String(adminId) })
+/** Access token: lleva el id del admin (sub) y el id de su sesión (sid). */
+export async function firmarToken(adminId, sesionId) {
+  return new SignJWT({ sub: String(adminId), sid: String(sesionId) })
     .setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
-    .setExpirationTime(`${DURACION_SEGUNDOS}s`)
+    .setExpirationTime(`${DURACION_ACCESO_SEGUNDOS}s`)
     .sign(clave());
 }
 
 export async function verificarToken(token) {
-  if (!token) return null;
+  if (!token || typeof token !== "string") return null;
   try {
     const { payload } = await jwtVerify(token, clave(), {
       algorithms: ["HS256"],
@@ -29,4 +36,14 @@ export async function verificarToken(token) {
   } catch {
     return null;
   }
+}
+
+/** Refresh token: 48 bytes aleatorios (no es un JWT, no se puede "leer"). */
+export function generarRefreshToken() {
+  return randomBytes(48).toString("base64url");
+}
+
+/** En la BD se guarda solo el hash: si se filtra la BD, los tokens no sirven. */
+export function hashRefreshToken(token) {
+  return createHash("sha256").update(token).digest("hex");
 }
