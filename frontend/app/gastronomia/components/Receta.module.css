@@ -40,6 +40,7 @@
   flex-shrink: 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.75em;
 }
 
@@ -111,6 +112,13 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.lugar {
+  margin: 0.3em 0 0;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--ambar-oscuro);
 }
 
 /* ---------- Contenido (celular: imagen arriba, receta abajo) ---------- */
@@ -298,8 +306,6 @@
     grid-template-rows: 1fr;
     gap: 1.2em;
   }
-
-
 }
 
 /* ---------- Laptop y PC ---------- */
@@ -347,16 +353,4 @@
   .botonSiguiente {
     transition: none;
   }
-}
-.barra {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.6rem;
-}
-
-.lugar {
-  font-size: clamp(0.75rem, 0.7vw + 0.5rem, 0.95rem);
-  font-weight: 600;
-  opacity: 0.85;
 }
